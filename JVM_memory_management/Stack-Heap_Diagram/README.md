@@ -54,11 +54,34 @@ Next, the _fill(list, name + name, times)_ method is called from the _main()_ me
    <img src="images/3.png" width="1000">
 </h2>
 
-4 When the _shrink () _ method is called, 
+4 When the _shrink() _ method is called, 
     a new "block" of memory is allocated on top of the previous one in accordance with the LIFO principle.
 
 <h2>
    <img src="images/4.png" width="1000">
 </h2>
+
+5 After the _shrink() _ method works, 
+    the JVM frees up the memory area that this method occupied.
+
+<h2>
+   <img src="images/5.png" width="1000">
+</h2>
+
+6 After the _fill() _ method works, 
+    the JVM frees up the memory area that this method occupied.
+
+<h2>
+   <img src="images/6.png" width="1000">
+</h2>
+
+7 After the _main() _ method works, the JVM frees up the memory area, 
+    and the program is terminated, the heap and stack are cleared.
+
+<h2>
+   <img src="images/1.png" width="1000">
+</h2>
+
+
 
    
