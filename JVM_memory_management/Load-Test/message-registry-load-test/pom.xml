@@ -51,9 +51,8 @@
                 <configuration>
                     <jvmArguments>
                         -Xmx50m
-                        -XX:+UseParallelGC
+                        -XX:+UseSerialGC
                     </jvmArguments>
-                    <!--                    mvn spring-boot:run-->
                 </configuration>
 
             </plugin>
