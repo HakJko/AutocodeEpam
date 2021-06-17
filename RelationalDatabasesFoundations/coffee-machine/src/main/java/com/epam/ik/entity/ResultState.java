@@ -1,6 +1,7 @@
 package com.epam.ik.entity;
 
 public enum ResultState {
+
     NONE(0),
     NO_WATER(0),
     NO_MILK(0),

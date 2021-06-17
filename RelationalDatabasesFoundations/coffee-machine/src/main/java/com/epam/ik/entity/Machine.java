@@ -1,6 +1,7 @@
 package com.epam.ik.entity;
 
 public class Machine {
+
     public int water;
     public int milk;
     public int beans;
