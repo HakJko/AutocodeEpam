@@ -4,6 +4,10 @@ package com.epam.rd.tasks.sqlqueries;
  * Implement sql queries like described
  */
 public class SqlQueries {
+    private final String MAX_QUANTITY_LETTERS = "5";
+    private final String MAX_SALARY = "5";
+    private final String MIN_SALARY = "5";
+
     //Select all employees sorted by last name in ascending order
     //language=HSQLDB
     String select01 = "SELECT ID, LASTNAME, SALARY FROM EMPLOYEE ORDER BY LASTNAME";
@@ -12,21 +16,23 @@ public class SqlQueries {
     //language=HSQLDB
     String select02 = "SELECT ID, LASTNAME, SALARY "
                     + "FROM EMPLOYEE "
-                    + "WHERE LENGTH(LASTNAME) <= 5"
+                    + "WHERE LENGTH(LASTNAME) <= " + MAX_QUANTITY_LETTERS
                     + "ORDER BY LASTNAME";
 
     //Select employees having salary no less than 2000 and no more than 3000
     //language=HSQLDB
     String select03 = "SELECT ID, LASTNAME, SALARY "
                     + "FROM EMPLOYEE "
-                    + "WHERE SALARY <= 3000 AND SALARY >= 2000"
+                    + "WHERE SALARY <= " + MAX_SALARY
+                    + " AND SALARY >=" + MIN_SALARY
                     + "ORDER BY LASTNAME";
 
     //Select employees having salary no more than 2000 or no less than 3000
     //language=HSQLDB
     String select04 = "SELECT ID, LASTNAME, SALARY "
                     + "FROM EMPLOYEE "
-                    + "WHERE SALARY >= 3000 OR SALARY <= 2000"
+                    + "WHERE SALARY >= " + MAX_SALARY
+                    + "OR SALARY <=" + MIN_SALARY
                     + "ORDER BY LASTNAME";
 
     //Select all employees assigned to departments and corresponding department
